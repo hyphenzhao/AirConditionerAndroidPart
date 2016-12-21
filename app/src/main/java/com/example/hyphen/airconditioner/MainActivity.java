@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
             "自动", "低速", "中速", "高速"
     };
     protected String modeList[] = {
-            "制冷", "制热", "除湿", "换气", "自动"
+            "制冷", "制热", "除湿"
     };
     protected Handler myHandler = null;
     protected boolean smartMode;
@@ -50,14 +50,14 @@ public class MainActivity extends AppCompatActivity {
             public void run(){
                 if(temp + 2 <= 30) {
                     temp += 2;
-                    String powerOnUrl = "http://ec2-54-254-214-255.ap-southeast-1.compute.amazonaws.com/sendCommand.php?commandID=2";
-                    new CommandSender().execute(powerOnUrl);
                 }
                 else if(temp + 1 <= 30) {
                     temp += 1;
                 }
                 textViews[0].setText("温度:\n"+ temp + "℃");
-                String powerOnUrl = "http://ec2-54-254-214-255.ap-southeast-1.compute.amazonaws.com/sendCommand.php?commandID=2";
+                String commandID = generateCommand(1, mode, temp, speed, time, humi);
+                String powerOnUrl = "http://ec2-54-254-214-255.ap-southeast-1.compute.amazonaws.com/AirConditionerServerPart/sendCommand.php?commandID=" + commandID;
+                System.out.println(powerOnUrl);
                 new CommandSender().execute(powerOnUrl);
             }
         };
@@ -91,7 +91,9 @@ public class MainActivity extends AppCompatActivity {
                     textViews[2].setText("风速:\n--");
                     textViews[3].setText("定时:\n--");
                     textViews[4].setText("模式:\n--");
-                    String powerOnUrl = "http://ec2-54-254-214-255.ap-southeast-1.compute.amazonaws.com/sendCommand.php?commandID=1";
+                    String commandID = generateCommand(0, mode, temp, speed, time, humi);
+                    String powerOnUrl = "http://ec2-54-254-214-255.ap-southeast-1.compute.amazonaws.com/AirConditionerServerPart/sendCommand.php?commandID=" + commandID;
+                    System.out.println(powerOnUrl);
                     new CommandSender().execute(powerOnUrl);
                     if(myHandler != null) {
                         myHandler.removeCallbacks(myRunnable);
@@ -119,7 +121,9 @@ public class MainActivity extends AppCompatActivity {
                     speed = 0;
                     time = 0;
                     mode = 0;
-                    String powerOnUrl = "http://ec2-54-254-214-255.ap-southeast-1.compute.amazonaws.com/sendCommand.php?commandID=0";
+                    String commandID = generateCommand(1, mode, temp, speed, time, humi);
+                    String powerOnUrl = "http://ec2-54-254-214-255.ap-southeast-1.compute.amazonaws.com/AirConditionerServerPart/sendCommand.php?commandID=" + commandID;
+                    System.out.println(powerOnUrl);
                     new CommandSender().execute(powerOnUrl);
                     myHandler = new Handler();
                     myHandler.postDelayed(myRunnable, delayTime);
@@ -134,7 +138,9 @@ public class MainActivity extends AppCompatActivity {
                 if(temp + 1 <= 30)
                     temp += 1;
                 textViews[0].setText("温度:\n"+ temp + "℃");
-                String powerOnUrl = "http://ec2-54-254-214-255.ap-southeast-1.compute.amazonaws.com/sendCommand.php?commandID=2";
+                String commandID = generateCommand(1, mode, temp, speed, time, humi);
+                String powerOnUrl = "http://ec2-54-254-214-255.ap-southeast-1.compute.amazonaws.com/AirConditionerServerPart/sendCommand.php?commandID=" + commandID;
+                System.out.println(powerOnUrl);
                 new CommandSender().execute(powerOnUrl);
             }
         });
@@ -145,7 +151,9 @@ public class MainActivity extends AppCompatActivity {
                 if(temp - 1 >= 16)
                     temp -= 1;
                 textViews[0].setText("温度:\n"+ temp + "℃");
-                String powerOnUrl = "http://ec2-54-254-214-255.ap-southeast-1.compute.amazonaws.com/sendCommand.php?commandID=3";
+                String commandID = generateCommand(1, mode, temp, speed, time, humi);
+                String powerOnUrl = "http://ec2-54-254-214-255.ap-southeast-1.compute.amazonaws.com/AirConditionerServerPart/sendCommand.php?commandID=" + commandID;
+                System.out.println(powerOnUrl);
                 new CommandSender().execute(powerOnUrl);
             }
         });
@@ -156,7 +164,9 @@ public class MainActivity extends AppCompatActivity {
                 if(humi + 1 <= 60)
                     humi += 1;
                 textViews[1].setText("湿度:\n"+ humi + "%");
-                String powerOnUrl = "http://ec2-54-254-214-255.ap-southeast-1.compute.amazonaws.com/sendCommand.php?commandID=4";
+                String commandID = generateCommand(1, mode, temp, speed, time, humi);
+                String powerOnUrl = "http://ec2-54-254-214-255.ap-southeast-1.compute.amazonaws.com/AirConditionerServerPart/sendCommand.php?commandID=" + commandID;
+                System.out.println(powerOnUrl);
                 new CommandSender().execute(powerOnUrl);
             }
         });
@@ -167,7 +177,9 @@ public class MainActivity extends AppCompatActivity {
                 if(humi - 1 >= 30)
                     humi -= 1;
                 textViews[1].setText("湿度:\n"+ humi + "%");
-                String powerOnUrl = "http://ec2-54-254-214-255.ap-southeast-1.compute.amazonaws.com/sendCommand.php?commandID=5";
+                String commandID = generateCommand(1, mode, temp, speed, time, humi);
+                String powerOnUrl = "http://ec2-54-254-214-255.ap-southeast-1.compute.amazonaws.com/AirConditionerServerPart/sendCommand.php?commandID=" + commandID;
+                System.out.println(powerOnUrl);
                 new CommandSender().execute(powerOnUrl);
             }
         });
@@ -177,7 +189,9 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 speed = (speed + 1) % 4;
                 textViews[2].setText("风速:\n" + speedList[speed]);
-                String powerOnUrl = "http://ec2-54-254-214-255.ap-southeast-1.compute.amazonaws.com/sendCommand.php?commandID=6";
+                String commandID = generateCommand(1, mode, temp, speed, time, humi);
+                String powerOnUrl = "http://ec2-54-254-214-255.ap-southeast-1.compute.amazonaws.com/AirConditionerServerPart/sendCommand.php?commandID=" + commandID;
+                System.out.println(powerOnUrl);
                 new CommandSender().execute(powerOnUrl);
             }
         });
@@ -190,7 +204,9 @@ public class MainActivity extends AppCompatActivity {
                 else
                     speed = 3;
                 textViews[2].setText("风速:\n" + speedList[speed]);
-                String powerOnUrl = "http://ec2-54-254-214-255.ap-southeast-1.compute.amazonaws.com/sendCommand.php?commandID=7";
+                String commandID = generateCommand(1, mode, temp, speed, time, humi);
+                String powerOnUrl = "http://ec2-54-254-214-255.ap-southeast-1.compute.amazonaws.com/AirConditionerServerPart/sendCommand.php?commandID=" + commandID;
+                System.out.println(powerOnUrl);
                 new CommandSender().execute(powerOnUrl);
             }
         });
@@ -200,7 +216,9 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 time = (time + 1) % 25;
                 textViews[3].setText("定时:\n" + time + "H");
-                String powerOnUrl = "http://ec2-54-254-214-255.ap-southeast-1.compute.amazonaws.com/sendCommand.php?commandID=8";
+                String commandID = generateCommand(1, mode, temp, speed, time, humi);
+                String powerOnUrl = "http://ec2-54-254-214-255.ap-southeast-1.compute.amazonaws.com/AirConditionerServerPart/sendCommand.php?commandID=" + commandID;
+                System.out.println(powerOnUrl);
                 new CommandSender().execute(powerOnUrl);
             }
         });
@@ -212,7 +230,9 @@ public class MainActivity extends AppCompatActivity {
                 else
                     time = 24;
                 textViews[3].setText("定时:\n" + time + "H");
-                String powerOnUrl = "http://ec2-54-254-214-255.ap-southeast-1.compute.amazonaws.com/sendCommand.php?commandID=9";
+                String commandID = generateCommand(1, mode, temp, speed, time, humi);
+                String powerOnUrl = "http://ec2-54-254-214-255.ap-southeast-1.compute.amazonaws.com/AirConditionerServerPart/sendCommand.php?commandID=" + commandID;
+                System.out.println(powerOnUrl);
                 new CommandSender().execute(powerOnUrl);
             }
         });
@@ -220,7 +240,7 @@ public class MainActivity extends AppCompatActivity {
         buttons[4][0].setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mode = (mode + 1) % 5;
+                mode = (mode + 1) % 3;
                 textViews[4].setText("模式:\n" + modeList[mode]);
                 boolean button1Enabled = true;
 
@@ -229,11 +249,14 @@ public class MainActivity extends AppCompatActivity {
                 }else if(mode == 0){
                     smartMode = true;
                     smartButton.setTextColor(0xff00ff00);
+                    smartButton.setEnabled(true);
                     myHandler = new Handler();
                     myHandler.postDelayed(myRunnable, delayTime);
                 }
                 if(mode != 0) {
                     if(myHandler != null) {
+                        smartButton.setEnabled(false);
+                        smartButton.setTextColor(0xffaaaaaa);
                         myHandler.removeCallbacks(myRunnable);
                         System.out.println("Temperature automatically increase has been terminated!");
                     }
@@ -242,8 +265,9 @@ public class MainActivity extends AppCompatActivity {
                 buttons[1][0].setEnabled(button1Enabled);
                 buttons[1][1].setEnabled(button1Enabled);
                 textViews[1].setEnabled(button1Enabled);
-
-                String powerOnUrl = "http://ec2-54-254-214-255.ap-southeast-1.compute.amazonaws.com/sendCommand.php?commandID=10";
+                String commandID = generateCommand(1, mode, temp, speed, time, humi);
+                String powerOnUrl = "http://ec2-54-254-214-255.ap-southeast-1.compute.amazonaws.com/AirConditionerServerPart/sendCommand.php?commandID=" + commandID;
+                System.out.println(powerOnUrl);
                 new CommandSender().execute(powerOnUrl);
             }
         });
@@ -254,7 +278,7 @@ public class MainActivity extends AppCompatActivity {
                 if(mode - 1 >= 0)
                     mode -= 1;
                 else
-                    mode = 4;
+                    mode = 2;
                 textViews[4].setText("模式:\n" + modeList[mode]);
                 boolean button1Enabled = true;
 
@@ -263,11 +287,14 @@ public class MainActivity extends AppCompatActivity {
                 }else if(mode == 0){
                     smartMode = true;
                     smartButton.setTextColor(0xff00ff00);
+                    smartButton.setEnabled(true);
                     myHandler = new Handler();
                     myHandler.postDelayed(myRunnable, delayTime);
                 }
                 if(mode != 0) {
                     if(myHandler != null) {
+                        smartButton.setEnabled(false);
+                        smartButton.setTextColor(0xffaaaaaa);
                         myHandler.removeCallbacks(myRunnable);
                         System.out.println("Temperature automatically increase has been terminated!");
                     }
@@ -277,7 +304,9 @@ public class MainActivity extends AppCompatActivity {
                 buttons[1][1].setEnabled(button1Enabled);
                 textViews[1].setEnabled(button1Enabled);
 
-                String powerOnUrl = "http://ec2-54-254-214-255.ap-southeast-1.compute.amazonaws.com/sendCommand.php?commandID=11";
+                String commandID = generateCommand(1, mode, temp, speed, time, humi);
+                String powerOnUrl = "http://ec2-54-254-214-255.ap-southeast-1.compute.amazonaws.com/AirConditionerServerPart/sendCommand.php?commandID=" + commandID;
+                System.out.println(powerOnUrl);
                 new CommandSender().execute(powerOnUrl);
             }
         });
@@ -300,6 +329,10 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+    }
+
+    protected String generateCommand(int power, int mode, int temp, int speed, int time, int humi) {
+        return power + "-" + mode + "-" + temp + "-" + speed + "-" + time + "-" + humi;
     }
 
     public void powerButtonClicked(View v) {

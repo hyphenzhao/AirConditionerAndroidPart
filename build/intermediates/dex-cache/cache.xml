@@ -3,15 +3,6 @@
 
     <item
         is-multidex="true"
-        jar="/home/hyphen/AndroidStudioProjects/AirConditioner/app/build/intermediates/exploded-aar/com.android.support/support-fragment/25.0.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.1"
-        sha1="26c6eef571592c91f29e56fda0bac73321de0c92">
-        <dex dex="/home/hyphen/AndroidStudioProjects/AirConditioner/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-fragment-25.0.1_4848721e8d7954d1b6aa18a20dba2b18ae08b6a2/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="/home/hyphen/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/25.0.1/support-annotations-25.0.1.jar"
         jumboMode="true"
         optimize="true"
@@ -30,6 +21,15 @@
     </item>
     <item
         is-multidex="true"
+        jar="/home/hyphen/Documents/GitHub/AirConditionerAndroidPart/app/build/intermediates/exploded-aar/com.android.support/support-v4/25.0.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.1"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="/home/hyphen/Documents/GitHub/AirConditionerAndroidPart/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v4-25.0.1_977efb24e9595c4b44c03390ff43d5d8d107581a/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="/home/hyphen/AndroidStudioProjects/AirConditioner/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.0.1/jars/libs/internal_impl-25.0.1.jar"
         jumboMode="true"
         optimize="true"
@@ -39,12 +39,12 @@
     </item>
     <item
         is-multidex="true"
-        jar="/home/hyphen/AndroidStudioProjects/AirConditioner/app/build/intermediates/exploded-aar/com.android.support.constraint/constraint-layout/1.0.0-beta4/jars/classes.jar"
+        jar="/home/hyphen/Documents/GitHub/AirConditionerAndroidPart/app/build/intermediates/exploded-aar/com.android.support/gridlayout-v7/25.0.1/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.1"
-        sha1="662d7533b25a666c649c10a16b42edfb95f25a4f">
-        <dex dex="/home/hyphen/AndroidStudioProjects/AirConditioner/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support.constraint-constraint-layout-1.0.0-beta4_e1a4b175d58d946ca30e0ac874c8e061b4fb378b/classes.dex" />
+        sha1="4700f436ede140fb804204f806c9cc3f08e386f4">
+        <dex dex="/home/hyphen/Documents/GitHub/AirConditionerAndroidPart/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-gridlayout-v7-25.0.1_1e7a4b04c7836dc17d6aa5785453143adc0ebd30/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -63,6 +63,141 @@
         revision="25.0.1"
         sha1="bc7e99e8d0fc279a05aa91378530f467ad62d443">
         <dex dex="/home/hyphen/AndroidStudioProjects/AirConditioner/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-core-ui-25.0.1_57686799b4f5521306c8008948d276108c7e8fce/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/hyphen/Documents/GitHub/AirConditionerAndroidPart/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/25.0.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.1"
+        sha1="772bed2d992b67b9d0327f766cc95cd63031dcd3">
+        <dex dex="/home/hyphen/Documents/GitHub/AirConditionerAndroidPart/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-animated-vector-drawable-25.0.1_edfcafbabbc99580f9218931b7700766eae6d9c6/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/hyphen/Documents/GitHub/AirConditionerAndroidPart/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.1"
+        sha1="3ee62df5cf41e0c02a2efa0053e5d3cd18dbd578">
+        <dex dex="/home/hyphen/Documents/GitHub/AirConditionerAndroidPart/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_7920cfabe0cfba479c95d43b60ea60b9c9759ede/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/hyphen/Documents/GitHub/AirConditionerAndroidPart/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.0.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.1"
+        sha1="00d4c8eebf2b681073c72a26bd0849549e51c7cb">
+        <dex dex="/home/hyphen/Documents/GitHub/AirConditionerAndroidPart/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-core-utils-25.0.1_fd385e3d2b5f467aa61c3c16c1686a72fa88122a/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/hyphen/Documents/GitHub/AirConditionerAndroidPart/app/build/intermediates/exploded-aar/com.android.support.constraint/constraint-layout/1.0.0-beta4/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.1"
+        sha1="662d7533b25a666c649c10a16b42edfb95f25a4f">
+        <dex dex="/home/hyphen/Documents/GitHub/AirConditionerAndroidPart/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support.constraint-constraint-layout-1.0.0-beta4_eff6b4337044a056ff5e4be4075b5a8768df5eb3/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/hyphen/Documents/GitHub/AirConditionerAndroidPart/app/build/intermediates/exploded-aar/com.android.support/support-fragment/25.0.1/jars/libs/internal_impl-25.0.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.1"
+        sha1="c0bd6ffb002a85b5e7cad29f8558d1cc59539679">
+        <dex dex="/home/hyphen/Documents/GitHub/AirConditionerAndroidPart/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-25.0.1_06b1be1a7403703832b38b6a4928cde46187aa9b/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/hyphen/Documents/GitHub/AirConditionerAndroidPart/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/25.0.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.1"
+        sha1="b24e1c688744078e1fa833ffadf696794761bbe5">
+        <dex dex="/home/hyphen/Documents/GitHub/AirConditionerAndroidPart/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-vector-drawable-25.0.1_c1b2738769376f70c07e416bfcd328c81386e10e/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/hyphen/Documents/GitHub/AirConditionerAndroidPart/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.0.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.1"
+        sha1="6a1479afe9f1b3645e1cd9a87318976893472818">
+        <dex dex="/home/hyphen/Documents/GitHub/AirConditionerAndroidPart/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-media-compat-25.0.1_b974423e4d8b53222a89baf119cdf390e59e1455/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/hyphen/AndroidStudioProjects/AirConditioner/app/build/intermediates/exploded-aar/com.android.support/support-v4/25.0.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.1"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="/home/hyphen/AndroidStudioProjects/AirConditioner/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v4-25.0.1_abf60e0151f09922398c4ed33c79acb2710fca63/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/hyphen/AndroidStudioProjects/AirConditioner/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.0.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.1"
+        sha1="6a1479afe9f1b3645e1cd9a87318976893472818">
+        <dex dex="/home/hyphen/AndroidStudioProjects/AirConditioner/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-media-compat-25.0.1_5ba7c50ccca40cd1d8b8759155eb312e453cfdd8/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/hyphen/Documents/GitHub/AirConditionerAndroidPart/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.0.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.1"
+        sha1="bc7e99e8d0fc279a05aa91378530f467ad62d443">
+        <dex dex="/home/hyphen/Documents/GitHub/AirConditionerAndroidPart/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-core-ui-25.0.1_383b88c54300dd813e0e8f15cf0e367cd929e501/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/hyphen/AndroidStudioProjects/AirConditioner/app/build/intermediates/exploded-aar/com.android.support/support-fragment/25.0.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.1"
+        sha1="26c6eef571592c91f29e56fda0bac73321de0c92">
+        <dex dex="/home/hyphen/AndroidStudioProjects/AirConditioner/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-fragment-25.0.1_4848721e8d7954d1b6aa18a20dba2b18ae08b6a2/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/hyphen/Documents/GitHub/AirConditionerAndroidPart/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.0.1/jars/libs/internal_impl-25.0.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.1"
+        sha1="f83b00041ecfba705603fec40363416c7de69719">
+        <dex dex="/home/hyphen/Documents/GitHub/AirConditionerAndroidPart/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-25.0.1_b081ae533c856818e45835cc4ace758c18dfee4d/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/hyphen/Documents/GitHub/AirConditionerAndroidPart/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.0.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.1"
+        sha1="51eba4a4dd73044f90a9d58dd7ca34adbebfcf4e">
+        <dex dex="/home/hyphen/Documents/GitHub/AirConditionerAndroidPart/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-compat-25.0.1_c97df6df49c3062eb058bb13f420eb1f12d6a57a/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/hyphen/Documents/GitHub/AirConditionerAndroidPart/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.0.1/jars/libs/internal_impl-25.0.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.1"
+        sha1="e5343c9d19cb19ff55f6b268c7f3fe8c9d224f6f">
+        <dex dex="/home/hyphen/Documents/GitHub/AirConditionerAndroidPart/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-25.0.1_bef0bc8968ff9f63cee92e4e2264171c976b6fed/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/hyphen/AndroidStudioProjects/AirConditioner/app/build/intermediates/exploded-aar/com.android.support.constraint/constraint-layout/1.0.0-beta4/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.1"
+        sha1="662d7533b25a666c649c10a16b42edfb95f25a4f">
+        <dex dex="/home/hyphen/AndroidStudioProjects/AirConditioner/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support.constraint-constraint-layout-1.0.0-beta4_e1a4b175d58d946ca30e0ac874c8e061b4fb378b/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -93,6 +228,15 @@
     </item>
     <item
         is-multidex="true"
+        jar="/home/hyphen/Documents/GitHub/AirConditionerAndroidPart/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.0.1/jars/libs/internal_impl-25.0.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.1"
+        sha1="c5b7145fb34779b6639147b8f2f8dd77c0db771b">
+        <dex dex="/home/hyphen/Documents/GitHub/AirConditionerAndroidPart/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-25.0.1_a6ba56768abb6e6530cf773c0fe85254c74d1d9b/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="/home/hyphen/AndroidStudioProjects/AirConditioner/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.0.1/jars/classes.jar"
         jumboMode="true"
         optimize="true"
@@ -108,6 +252,24 @@
         revision="25.0.1"
         sha1="4700f436ede140fb804204f806c9cc3f08e386f4">
         <dex dex="/home/hyphen/AndroidStudioProjects/AirConditioner/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-gridlayout-v7-25.0.1_472ec515763c0578487879cc967d3ac994f3c537/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/hyphen/Documents/GitHub/AirConditionerAndroidPart/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.0.1/jars/libs/internal_impl-25.0.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.1"
+        sha1="3af8cc51ef7088e56f132780da8c0bd858b6a6ad">
+        <dex dex="/home/hyphen/Documents/GitHub/AirConditionerAndroidPart/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-25.0.1_27612fb799529797a79ef727d62196b1d6ed1735/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/hyphen/Documents/GitHub/AirConditionerAndroidPart/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.1"
+        sha1="0ae7957b558b034267c269b9a74fa3618598e869">
+        <dex dex="/home/hyphen/Documents/GitHub/AirConditionerAndroidPart/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_df80c11e73419a1d9aa2b53b20e3b690c904de25/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -138,15 +300,6 @@
     </item>
     <item
         is-multidex="true"
-        jar="/home/hyphen/AndroidStudioProjects/AirConditioner/app/build/intermediates/exploded-aar/com.android.support/support-v4/25.0.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.1"
-        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
-        <dex dex="/home/hyphen/AndroidStudioProjects/AirConditioner/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v4-25.0.1_abf60e0151f09922398c4ed33c79acb2710fca63/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="/home/hyphen/AndroidStudioProjects/AirConditioner/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.0.1/jars/libs/internal_impl-25.0.1.jar"
         jumboMode="true"
         optimize="true"
@@ -156,12 +309,21 @@
     </item>
     <item
         is-multidex="true"
-        jar="/home/hyphen/AndroidStudioProjects/AirConditioner/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.0.1/jars/classes.jar"
+        jar="/home/hyphen/Documents/GitHub/AirConditionerAndroidPart/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.0.1/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.1"
-        sha1="6a1479afe9f1b3645e1cd9a87318976893472818">
-        <dex dex="/home/hyphen/AndroidStudioProjects/AirConditioner/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-media-compat-25.0.1_5ba7c50ccca40cd1d8b8759155eb312e453cfdd8/classes.dex" />
+        sha1="f7ac4b327fdb9e2ee386f5adc46164927658de4b">
+        <dex dex="/home/hyphen/Documents/GitHub/AirConditionerAndroidPart/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-appcompat-v7-25.0.1_65dd1c466eb5cd5a46adc1731f7ce0c9f82ef9e7/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/hyphen/Documents/GitHub/AirConditionerAndroidPart/app/build/intermediates/exploded-aar/com.android.support/support-fragment/25.0.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.1"
+        sha1="26c6eef571592c91f29e56fda0bac73321de0c92">
+        <dex dex="/home/hyphen/Documents/GitHub/AirConditionerAndroidPart/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-fragment-25.0.1_1b3b890af98d3f53e3685aee0d4e42b9cfdad711/classes.dex" />
     </item>
     <item
         is-multidex="true"
