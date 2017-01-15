@@ -1,8 +1,9 @@
 package com.example.hyphen.airconditioner;
 
 import android.os.AsyncTask;
-
+import java.io.ByteArrayOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -12,6 +13,8 @@ import java.util.logging.Logger;
 /**
  * Created by hyphen on 18/12/16.
  */
+
+
 
 public class CommandSender extends AsyncTask<String, Void, Void> {
 
@@ -30,6 +33,20 @@ public class CommandSender extends AsyncTask<String, Void, Void> {
             int status = c.getResponseCode();
             switch (status) {
                 case 200:
+                    InputStream is = c.getInputStream();
+                    ByteArrayOutputStream baos = new ByteArrayOutputStream();
+                    byte[] buffer = new byte[1024];
+                    int len = 0;
+                    while (-1 != (len = is.read(buffer))) {
+                        baos.write(buffer, 0, len);
+                        baos.flush();
+                    }
+                    System.out.println(baos.toString());
+                    if(MainActivity.flag) {
+                        MainActivity.httpResultStr = new String(baos.toString());
+                        System.out.println(baos.toString());
+                        MainActivity.flag = false;
+                    }
                     System.out.println("HTTP 200");
                     break;
                 case 201:

@@ -11,7 +11,9 @@ import org.w3c.dom.Text;
 
 
 public class MainActivity extends AppCompatActivity {
-    protected int delayTime = 360000;
+    public static String httpResultStr;
+    public static boolean flag = false;
+    protected int delayTime = 360000, refreshTime = 1000;
     protected boolean powerButtonClicked = false;
     protected int temp, humi, speed, time, mode;
     protected String speedList[] = {
@@ -20,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
     protected String modeList[] = {
             "制冷", "制热", "除湿"
     };
-    protected Handler myHandler = null;
+    protected Handler myHandler = null, refreshHandler = null;
     protected boolean smartMode;
 //    protected CommandSender mySender = new CommandSender();
 
@@ -43,6 +45,8 @@ public class MainActivity extends AppCompatActivity {
                 (TextView)findViewById(R.id.textView3),
                 (TextView)findViewById(R.id.textView4),
                 (TextView)findViewById(R.id.textView5),
+                (TextView)findViewById(R.id.textView6),
+                (TextView)findViewById(R.id.textView7),
         };
 
         final Runnable myRunnable = new Runnable(){
@@ -57,8 +61,26 @@ public class MainActivity extends AppCompatActivity {
                 textViews[0].setText("温度:\n"+ temp + "℃");
                 String commandID = generateCommand(1, mode, temp, speed, time, humi);
                 String powerOnUrl = "http://ec2-54-254-214-255.ap-southeast-1.compute.amazonaws.com/AirConditionerServerPart/sendCommand.php?commandID=" + commandID;
-                System.out.println(powerOnUrl);
+                //System.out.println(powerOnUrl);
                 new CommandSender().execute(powerOnUrl);
+            }
+        };
+
+        final Runnable refreshRunnable = new Runnable(){
+            @Override
+            public void run(){
+
+                if(httpResultStr != null && !httpResultStr.isEmpty()){
+                    System.out.println(httpResultStr);
+                    String str[] = httpResultStr.split("-");
+                    textViews[5].setText("当前温度：\n" + str[0] + "℃");
+                    textViews[6].setText("当前湿度：\n" + str[1] + "%");
+                }
+                String powerOnUrl = "http://ec2-54-254-214-255.ap-southeast-1.compute.amazonaws.com/AirConditionerServerPart/receiveStatus.php";
+                //System.out.println(powerOnUrl);
+                flag = true;
+                new CommandSender().execute(powerOnUrl);
+                refreshHandler.postDelayed(this, refreshTime);
             }
         };
 
@@ -77,10 +99,11 @@ public class MainActivity extends AppCompatActivity {
                 //powerButtonClicked(v);
                 if(powerButtonClicked){
                     powerButton.setTextColor(0xffff0000);
-                    for(int i = 0; i < 5; i++) {
+                    for(int i = 0; i < 7; i++) {
                         textViews[i].setEnabled(false);
                         for (int j = 0; j < 2; j++) {
-                            buttons[i][j].setEnabled(false);
+                            if(i < 5)
+                                buttons[i][j].setEnabled(false);
                         }
                     }
                     smartButton.setEnabled(false);
@@ -91,6 +114,8 @@ public class MainActivity extends AppCompatActivity {
                     textViews[2].setText("风速:\n--");
                     textViews[3].setText("定时:\n--");
                     textViews[4].setText("模式:\n--");
+                    textViews[5].setText("当前温度:\n--℃");
+                    textViews[6].setText("当前湿度:\n--%");
                     String commandID = generateCommand(0, mode, temp, speed, time, humi);
                     String powerOnUrl = "http://ec2-54-254-214-255.ap-southeast-1.compute.amazonaws.com/AirConditionerServerPart/sendCommand.php?commandID=" + commandID;
                     System.out.println(powerOnUrl);
@@ -99,14 +124,18 @@ public class MainActivity extends AppCompatActivity {
                         myHandler.removeCallbacks(myRunnable);
                         System.out.println("Temperature automatically increase has been terminated!");
                     }
+                    if(refreshHandler != null) {
+                        refreshHandler.removeCallbacks(refreshRunnable);
+                    }
 
                 }else{
                     powerButton.setTextColor(0xff00ff00);
                     smartButton.setTextColor(0xff00ff00);
-                    for(int i = 0; i < 5; i++) {
+                    for(int i = 0; i < 7; i++) {
                         textViews[i].setEnabled(true);
                         for (int j = 0; j < 2; j++) {
-                            buttons[i][j].setEnabled(true);
+                            if(i < 5)
+                                buttons[i][j].setEnabled(true);
                         }
                     }
                     smartButton.setEnabled(true);
@@ -127,6 +156,8 @@ public class MainActivity extends AppCompatActivity {
                     new CommandSender().execute(powerOnUrl);
                     myHandler = new Handler();
                     myHandler.postDelayed(myRunnable, delayTime);
+                    refreshHandler = new Handler();
+                    refreshHandler.postDelayed(refreshRunnable, refreshTime);
                 }
                 powerButtonClicked = !powerButtonClicked;
             }

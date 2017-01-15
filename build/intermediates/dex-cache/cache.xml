@@ -79,7 +79,7 @@
         jumboMode="true"
         optimize="true"
         revision="25.0.1"
-        sha1="3ee62df5cf41e0c02a2efa0053e5d3cd18dbd578">
+        sha1="2c5235b2de39bec8cdcebd5a6279bcf229118c02">
         <dex dex="/home/hyphen/Documents/GitHub/AirConditionerAndroidPart/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_7920cfabe0cfba479c95d43b60ea60b9c9759ede/classes.dex" />
     </item>
     <item
@@ -268,7 +268,7 @@
         jumboMode="true"
         optimize="true"
         revision="25.0.1"
-        sha1="0ae7957b558b034267c269b9a74fa3618598e869">
+        sha1="dcba91aeea3dc2edfcc47afe00555c8875af8f35">
         <dex dex="/home/hyphen/Documents/GitHub/AirConditionerAndroidPart/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_df80c11e73419a1d9aa2b53b20e3b690c904de25/classes.dex" />
     </item>
     <item
